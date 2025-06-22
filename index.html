@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch & Timer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="fireflyCanvas"></canvas>
+  <div id="helloScreen" class="screen active">
+    <h1 id="welcomeText">Welcome!</h1>
+    <button class="btn" onclick="switchScreens('helloScreen','chooseModeScreen')">Enter</button>
+  </div>
+
+  <div id="chooseModeScreen" class="screen slide-right">
+    <h1 id="chooseModeText">Choose Mode</h1>
+    <button class="btn" id="stopwatchBtn" onclick="goToMode('stopwatch')">Stopwatch</button>
+    <button class="btn" id="timerBtn" onclick="goToMode('timer')">Timer</button>
+    <button class="btn" onclick="goToMode('focus')">Focus Mode</button>
+    <button class="btn" onclick="switchScreens('chooseModeScreen','helloScreen')">Back</button>
+  </div>
+
+  <div id="focusTimeScreen" class="screen slide-right">
+    <h1 id="focusLabel">Focus Mode</h1>
+    <div class="custom-time-inputs">
+      <input type="number" id="focusHours" min="0" placeholder="hh">
+      <input type="number" id="focusMinutes" min="0" placeholder="mm">
+      <input type="number" id="focusSeconds" min="0" placeholder="ss">
+      <button class="btn" onclick="startFocusMode()">Start</button>
+      <button class="btn" onclick="switchScreens('focusTimeScreen','chooseModeScreen')">Back</button>
+    </div>
+  </div>
+
+  <div id="timerScreen" class="screen slide-right">
+    <h1 id="modeLabel">Stopwatch</h1>
+    <div id="display">00:00:00</div>
+
+    <div id="presetContainer" class="preset-buttons" style="display:none">
+      <button class="preset-btn" onclick="setTimer(5)">5 min</button>
+      <button class="preset-btn" onclick="setTimer(10)">10 min</button>
+      <button class="preset-btn" onclick="setTimer(15)">15 min</button>
+      <button class="preset-btn" onclick="setTimer(20)">20 min</button>
+      <button class="preset-btn" onclick="setTimer(30)">30 min</button>
+    </div>
+    <div id="customTimeContainer" class="custom-time-inputs" style="display: none;">
+      <input type="number" id="customHours" min="0" placeholder="Hrs ✧">
+      <input type="number" id="customMinutes" min="0" placeholder="Min ✧">
+      <input type="number" id="customSeconds" min="0" placeholder="Sec ✧">
+      <button class="btn" onclick="setCustomTimer()">Set</button>
+    </div>
+    <div>
+      <button class="btn" id="toggleBtn" onclick="toggle()">Start</button>
+      <button class="btn" onclick="reset()">Reset</button>
+      <button class="btn" onclick="switchScreens('timerScreen','chooseModeScreen')">Back</button>
+    </div>
+  </div>
+
+  <audio id="alertSound" src="alarm.mp3" preload="auto"></audio>
+  <audio id="clickSound" src="click.wav" preload="auto"></audio>
+
+  <div id="focusOverlay">
+    <div id="focusDisplay">00:00:00</div>
+    <div style="margin-top: 25px; display: flex; gap: 20px;">
+      <button class="btn" onclick="exitFocusMode()">Exit Focus Mode</button>
+      <button class="btn" onclick="pauseFocusMode()">Pause Focus Mode</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
