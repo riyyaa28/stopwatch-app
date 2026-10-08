@@ -33,7 +33,7 @@ stopwatch-app/
    open index.html
    
 ## 🖥️ Live Demo
-If deployed via GitHub Pages:
+Github Pages Link:
 [https://riyyaa28.github.io/stopwatch-app](https://riyyaa28.github.io/stopwatch-app)
 ## 🛠️ Built With
 * HTML5
