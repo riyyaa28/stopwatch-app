@@ -26,7 +26,7 @@ stopwatch-app/
 
 1. Clone this repository
 
-   git clone https://github.com/your-username/stopwatch-app.git
+   git clone https://github.com/riyyaa28/stopwatch-app.git
    
 2. Open the project
    cd stopwatch-app
