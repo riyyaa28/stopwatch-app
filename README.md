@@ -16,15 +16,10 @@ An interactive stopwatch, timer, and focus mode web app built with HTML, CSS, an
 
 stopwatch-app/
 ├── index.html         # Main HTML file
-
 ├── style.css          # All app styling
-
 ├── script.js          # JavaScript logic and interactions
-
 ├── alarm.mp3          # Alert sound for timer end
-
 ├── click.wav          # Sound for button clicks
-
 └── README.md          # Project overview
 
 ## 🚀 Getting Started
