@@ -15,12 +15,12 @@ An interactive stopwatch, timer, and focus mode web app built with HTML, CSS, an
 ## 📁 Project Structure
 
 stopwatch-app/
-├── index.html         # Main HTML file
-├── style.css          # All app styling
-├── script.js          # JavaScript logic and interactions
-├── alarm.mp3          # Alert sound for timer end
-├── click.wav          # Sound for button clicks
-└── README.md          # Project overview
+├── index.html
+├── style.css
+├── script.js
+├── alarm.mp3
+├── click.wav
+└── README.md
 
 ## 🚀 Getting Started
 
