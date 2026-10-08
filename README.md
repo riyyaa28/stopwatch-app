@@ -12,8 +12,9 @@ An interactive stopwatch, timer, and focus mode web app built with HTML, CSS, an
 * Animated firefly background with canvas
 * Responsive layout and smooth transitions
 
-📁 Project Structure
+## 📁 Project Structure
 
+```text
 stopwatch-app/
 ├── index.html
 ├── style.css
@@ -21,6 +22,7 @@ stopwatch-app/
 ├── alarm.mp3
 ├── click.wav
 └── README.md
+```
 
 ## 🚀 Getting Started
 
